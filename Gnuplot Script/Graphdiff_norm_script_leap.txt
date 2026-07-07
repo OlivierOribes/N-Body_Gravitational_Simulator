@@ -1,0 +1,81 @@
+===============================================================================
+# General settings for multi plots
+===============================================================================
+set terminal pngcairo size 800,600
+set grid
+set sample 1000000
+set xlabel "Step"
+set ylabel "Difference_norm (AU)"
+
+===============================================================================
+# Mercury
+===============================================================================
+set output "diff_norm_Mercury_leap.png"
+set title "difference Norm Mercury leapfrog"
+plot "norm_diff_leap_Mercury.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Venus
+===============================================================================
+set output "diff_norm_Venus_leap.png"
+set title "difference norm Venus leapfrog"
+plot "norm_diff_leap_Venus.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Earth
+===============================================================================
+set output "diff_norm_Earth_leap.png"
+set title "difference norm Earth leapfrog"
+plot "norm_diff_leap_Earth.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Mars
+===============================================================================
+set output "diff_norm_Mars_leap.png"
+set title "difference norm Mars leapfrog"
+plot "norm_diff_leap_Mars.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Jupiter
+===============================================================================
+set output "diff_norm_Jupiter_Leap.png"
+set title "difference norm Jupiter leapfrog"
+plot "norm_diff_leap_Jupiter.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Saturn
+===============================================================================
+set output "diff_norm_Saturn_Leap.png"
+set title "difference norm Saturn Leap"
+plot "norm_diff_leap_Saturn.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Uranus
+===============================================================================
+set output "diff_norm_Uranus_Leap.png"
+set title "difference norm Uranus Leapfrog"
+plot "norm_diff_leap_Uranus.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Neptune
+===============================================================================
+set output "diff_norm_Neptune_Leap.png"
+set title "difference norm Neptune Leapfrog"
+plot "norm_diff_leap_Neptune.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+

@@ -1,0 +1,81 @@
+===============================================================================
+# General settings for multi plots
+===============================================================================
+set terminal pngcairo size 800,600
+set grid
+set sample 1000000
+set xlabel "Temps(jour)"
+set ylabel "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%)"
+
+===============================================================================
+# Mercury
+===============================================================================
+set output "Difference_Mercury_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Mercury Yoshida"
+plot "Difference_Yoshida_Mercury.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Venus
+===============================================================================
+set output "Difference_Venus_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Venus Yoshida"
+plot "Difference_Yoshida_Venus.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Earth
+===============================================================================
+set output "Difference_Earth_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Earth Yoshida"
+plot "Difference_Yoshida_Earth.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Mars
+===============================================================================
+set output "Difference_Mars_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Mars Yoshida"
+plot "Difference_Yoshida_Mars.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Jupiter
+===============================================================================
+set output "Difference_Jupiter_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Jupiter Yoshida"
+plot "Difference_Yoshida_Jupiter.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Saturn
+===============================================================================
+set output "Difference_Saturn_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Saturn Yoshida"
+plot "Difference_Yoshida_Saturn.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Uranus
+===============================================================================
+set output "Difference_Uranus_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Uranus Yoshida"
+plot "Difference_Yoshida_Uranus.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+
+===============================================================================
+# Neptune
+===============================================================================
+set output "Difference_Neptune_Yoshida.png"
+set title "Rapport de rayon orbital (|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100) (%) Neptune Yoshida"
+plot "Difference_Yoshida_Neptune.txt" using 1:2 title "|rO_{Nasa}-rO_{num}|(/rO_{Nasa})*100" with lines
+
+unset output
+

@@ -1,0 +1,81 @@
+===============================================================================
+# General settings for multi plots
+===============================================================================
+set terminal pngcairo size 800,600
+set grid
+set sample 1000000
+set xlabel "Step"
+set ylabel "Difference_norm (AU)"
+
+===============================================================================
+# Mercury
+===============================================================================
+set output "diff_norm_Mercury_Yoshida.png"
+set title "difference Norm Mercury Yoshida"
+plot "norm_diff_Yoshida_Mercury.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Venus
+===============================================================================
+set output "diff_norm_Venus_Yoshida.png"
+set title "difference norm Venus Yoshida"
+plot "norm_diff_Yoshida_Venus.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Earth
+===============================================================================
+set output "diff_norm_Earth_Yoshida.png"
+set title "difference norm Earth Yoshida"
+plot "norm_diff_Yoshida_Earth.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Mars
+===============================================================================
+set output "diff_norm_Mars_Yoshida.png"
+set title "difference norm Mars Yoshida"
+plot "norm_diff_Yoshida_Mars.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Jupiter
+===============================================================================
+set output "diff_norm_Jupiter_Yoshida.png"
+set title "difference norm Jupiter Yoshida"
+plot "norm_diff_Yoshida_Jupiter.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Saturn
+===============================================================================
+set output "diff_norm_Saturn_Yoshida.png"
+set title "difference norm Saturn Yoshida"
+plot "norm_diff_Yoshida_Saturn.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Uranus
+===============================================================================
+set output "diff_norm_Uranus_Yoshida.png"
+set title "difference norm Uranus Yoshida"
+plot "norm_diff_Yoshida_Uranus.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Neptune
+===============================================================================
+set output "diff_norm_Neptune_Yoshida.png"
+set title "difference norm Neptune Yoshida"
+plot "norm_diff_Yoshida_Neptune.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+

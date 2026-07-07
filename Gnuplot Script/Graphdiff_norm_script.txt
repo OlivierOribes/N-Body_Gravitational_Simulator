@@ -1,0 +1,81 @@
+===============================================================================
+# General settings for multi plots
+===============================================================================
+set terminal pngcairo size 800,600
+set grid
+set sample 1000000
+set xlabel "Time(day)"
+set ylabel "Difference_norm (AU)"
+
+===============================================================================
+# Mercury
+===============================================================================
+set output "Norm_relative_vector_Mercury_Yoshida.png"
+set title "Norme du vecteur distance relative Mercury Yoshida"
+plot "Angle_Yoshida_Mercury.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Venus
+===============================================================================
+set output "Norm_relative_vector_Venus_Yoshida.png"
+set title "Norme du vecteur distance relative Venus Yoshida"
+plot "Angle_Yoshida_Venus.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Earth
+===============================================================================
+set output "Norm_relative_vector_Earth_Yoshida.png"
+set title "Norme du vecteur distance relative Earth Yoshida"
+plot "Angle_Yoshida_Earth.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Mars
+===============================================================================
+set output "Norm_relative_vector_Mars_Yoshida.png"
+set title "Norme du vecteur distance relative Mars Yoshida"
+plot "Angle_Yoshida_Mars.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Jupiter
+===============================================================================
+set output "Norm_relative_vector_Jupiter_Yoshida.png"
+set title "Norme du vecteur distance relative Jupiter Yoshida"
+plot "Angle_Yoshida_Jupiter.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Saturn
+===============================================================================
+set output "Norm_relative_vector_Saturn_Yoshida.png"
+set title "Norme du vecteur distance relative Saturn Yoshida"
+plot "Angle_Yoshida_Saturn.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Uranus
+===============================================================================
+set output "Norm_relative_vector_Uranus_Yoshida.png"
+set title "dNorme du vecteur distance relative Uranus Yoshida"
+plot "Angle_Yoshida_Uranus.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
+===============================================================================
+# Neptune
+===============================================================================
+set output "Norm_relative_vector_Neptune_Yoshida.png"
+set title "Norme du vecteur distance relative Neptune Yoshida"
+plot "Angle_Yoshida_Neptune.txt" using 1:2 title "|r_{num}-r_{Nasa}|" with lines
+
+unset output
+
