@@ -159,6 +159,4 @@ Key references used throughout the report :
 
 ## License
 
-## License
-
 This project is licensed under the BSD 3-Clause License. See the `LICENSE` file for the full license text.
