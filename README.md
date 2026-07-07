@@ -86,7 +86,7 @@ The three programs in [`Codes/tools/`](Codes/tools) are small, single-purpose ut
 |---|---|---|---|
 | **`dataextraction`** ([`dataextraction.cpp`](Codes/tools/dataextraction.cpp)) | Parses a raw JPL Horizons text export (copy-pasted straight from the Horizons web interface) and extracts the `X`, `Y`, `Z` position triplet from each `X = ... Y = ... Z = ...` line, using the regex `X\s*=\s*([+-]?\d[.\deE+-]*)\s*Y\s*=\s*(...)\s*Z\s*=\s*(...)` to capture scientific-notation floats. Produces one clean `X Y Z` row per timestep. | `horizons_results.txt` | `horizons_results_Saturn.txt` |
 | **`extraction_diffnorm`** ([`Extraction_diffnorm.cpp`](Codes/tools/Extraction_diffnorm.cpp)) | Splits a combined 5-column norm-difference file (`time  planet  …  …  norm`) into one 2-column (`time norm`) file per planet, in the format the [`Gnuplot Script/`](Gnuplot%20Script) scripts expect. Recognizes Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune by name in column 2. | `norm_diff.txt` | `norm_diff_Yoshida_<Planet>.txt` (one per planet) |
-| **`differenceprog`** ([`differenceprog.cpp`](Codes/tools/differenceprog.cpp)) | Reads a simulated-trajectory file and a Horizons reference file line-by-line in parallel (each skipping its own header row) and writes the raw per-axis coordinate differences $(\Delta X, \Delta Y, \Delta Z)$ between the two — as opposed to `extraction_diffnorm`, which works on an already-computed Euclidean norm. | `data_YoshidaMercury.txt`, `horizons_results_Mercury.txt` | `differenceMercuryYoshida.txt` |
+| **`differenceprog`** ([`differenceprog.cpp`](Codes/tools/differenceprog.cpp)) | Reads a simulated-trajectory file and a Horizons reference file line-by-line in parallel (each skipping its own header row) and writes the raw per-axis coordinate differences $(\Delta X, \Delta Y, \Delta Z)$ between the two : as opposed to `extraction_diffnorm`, which works on an already-computed Euclidean norm. | `data_YoshidaMercury.txt`, `horizons_results_Mercury.txt` | `differenceMercuryYoshida.txt` |
 
 ## Building and running
 
@@ -127,7 +127,7 @@ The NASA reference files (`Fichiers de données Horizon System/horizons_results_
 
 ### Trajectories
 
-Simulated orbits closely track the NASA reference over ~165 years, with the 23-body configuration (adding the Moon, main asteroids and Galilean/Saturnian moons) reducing drift significantly compared to the bare 9-body Sun+planets system. Reducing the time step from 1 day to 1 hour divides the positional error by a factor of 2 to 100 depending on the planet. Uranus and Neptune retain the largest residual drift, plausibly from unmodeled bodies (Kuiper belt objects, a hypothetical ninth planet) or from neglecting planetary precession/nutation.
+Simulated orbits closely track the NASA reference over ~165 years, with the 23-body configuration (adding the Moon, main asteroids and Galilean/Saturnian moons) reducing drift significantly compared to the bare 9-body Sun+planets system. Reducing the time step from 1 day to 1 hour divides the positional error by a factor of 2 to 100 depending on the planet. Uranus and Neptune retain the largest residual drift, plausibly from unmodeled bodies (Kuiper belt objects, satellites) or from neglecting planetary precession/nutation.
 
 <p align="center">
   <img src="Graphiques/Diff_norm_graph_Yoshida/diff_norm_Earth_Yoshida.png" width="45%">
@@ -148,7 +148,7 @@ Yoshida 4th order is consistently more accurate than leapfrog (up to 2× for Ven
 
 ## Bibliography
 
-Key references used throughout the report (see [`biblio.bib`](biblio.bib) and [`Bibliographie/`](Bibliographie) for the full list and PDFs):
+Key references used throughout the report :
 
 - H. Yoshida, *Construction of higher order symplectic integrators*, Physics Letters A, 1990.
 - E. Hairer, C. Lubich, G. Wanner, *Geometric Numerical Integration*, Springer, 2006.
@@ -159,9 +159,6 @@ Key references used throughout the report (see [`biblio.bib`](biblio.bib) and [`
 
 ## License
 
-Academic project submitted for the LU3PY126 FOAD course at Sorbonne Université. No license is specified, please contact the authors before reusing the code or report.
-
 ## License
 
-Academic project submitted for the LU3PY126 FOAD course at Sorbonne Université. No license is specified — please contact the authors before reusing the code or report.
-
+This project is licensed under the BSD 3-Clause License. See the `LICENSE` file for the full license text.
