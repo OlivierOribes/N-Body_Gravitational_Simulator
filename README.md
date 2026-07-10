@@ -76,7 +76,7 @@ Two further quantities are computed to validate the simulation, isolated as stan
 └── Mode d'emploi/                       # Usage guide: README.md (English) + original French PDF
 ```
 
-> The four `Codes/*.cpp` program versions (V0 → V8) are kept exactly as submitted: the report's code listings (`\lstinputlisting`) point directly at these files, so they double as the project's revision history. Each version corresponds to a major development milestone, with the header of each source file documenting in detail the features implemented at that stage.
+> The four `Codes/*.cpp` program versions (V0, V6, V7 and V8) are kept exactly as submitted. Each version corresponds to a major development milestone, with the header of each source file documenting in detail the features implemented at that stage.
 
 ### `tools/` helpers
 
@@ -94,7 +94,7 @@ The three programs in [`Codes/tools/`](Codes/tools) are small, single-purpose ut
 
 | Requirement | Version |
 |---|---|
-| C++ compiler | GCC 7+ / Clang 5+ / MSVC 2017+ (C++17) |
+| C++ compiler | GCC  / Clang |
 | [Eigen]([https://eigen.tuxfamily.org](https://libeigen.gitlab.io/))|
 
 ### Build
